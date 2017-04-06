@@ -6,12 +6,16 @@ todo_list = text.readlines()
 text.close()
 
 def print_todo_list():
-    for todo in range(len(todo_list) + 1):
-        print(str(todo) + " " + (todo_list[todo - 1]))
+    if len(todo_list) == 0:
+        print("No todos for today, man!")
+    else:
+        for todo in range(len(todo_list) + 1):
+            print(str(todo) + " " + (todo_list[todo - 1]))
 
 def controller():
     if sys.argv[1] == "-l":
         print_todo_list()
+
 
 controller()
 
