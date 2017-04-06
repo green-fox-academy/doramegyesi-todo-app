@@ -1,15 +1,12 @@
 import sys
 print(sys.argv)
 
-
 text = open("todo_app.txt", "r")
 todo_list = text.readlines()
 text.close()
 
-print(todo_list)
-
-#def arg_reader():
-	#for i in todo_list:
+for todo in todo_list:
+    print(todo)
 
 
 
