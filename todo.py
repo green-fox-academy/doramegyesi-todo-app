@@ -5,8 +5,8 @@ text = open("todo_app.txt", "r")
 todo_list = text.readlines()
 text.close()
 
-for todo in todo_list:
-    print(todo)
+for todo in range(len(todo_list) + 1):
+    print(str(todo) + " " + (todo_list[todo - 1]))
 
 
 
