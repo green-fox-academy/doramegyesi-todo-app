@@ -22,13 +22,15 @@ print(todo_list)
 		#print('something', arguments[1])
 
 def print_help():
-    help_info =    ["Python todo application"
-                    "======================="
-                    "Command line arguments:"
-                    "-l Lists all the tasks"
-                    "-a Adds a new task"
-                    "-r Removes a task"
+    help_info =    ["Python todo application",
+                    "=======================",
+                    "Command line arguments:",
+                    "-l Lists all the tasks",
+                    "-a Adds a new task",
+                    "-r Removes a task",
                     "-c Completes task"]
 
-    for i in help_info:
-        print(help_info[i])
+    for content in help_info:
+        print(content)
+
+print_help()
