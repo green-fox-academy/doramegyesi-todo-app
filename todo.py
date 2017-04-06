@@ -5,12 +5,18 @@ text = open("todo_app.txt", "r")
 todo_list = text.readlines()
 text.close()
 
-for todo in range(len(todo_list) + 1):
-    print(str(todo) + " " + (todo_list[todo - 1]))
+def print_todo_list():
+    for todo in range(len(todo_list) + 1):
+        print(str(todo) + " " + (todo_list[todo - 1]))
+
+def controller():
+    if sys.argv[1] == "-l":
+        print_todo_list()
+
+controller()
 
 
 
-#arguments = arg_reader()
 
 #if len(arguments) == 0:
 #    print('')
@@ -29,5 +35,3 @@ def print_help():
 
     for content in help_info:
         print(content)
-
-print_help()
