@@ -21,7 +21,7 @@ def print_todo_list():
     if len(todo_list) == 0:
         print("No todos for today, man!")
     else:
-        for todo in range(len(todo_list) + 1):
+        for todo in range(1, len(todo_list) + 1):
             print(str(todo) + " " + (todo_list[todo - 1]))
 
 def controller():
@@ -33,16 +33,13 @@ def controller():
         remove_task()
     if sys.argv[1] == "-c":
         complete_task()
-    else:
+    elif len(sys.argv) == 0:
         print_help()
 
 def add_new_task():
-    #if sys.argv[1] == "-a" and sys.argv[2] == "":
         new_todo = open("todo_app.txt", "a")
-        new = "go to sleep"
+        new = sys.argv[2]
         add_todo = new_todo.writelines(new)
         new_todo.close()
-
-add_new_task()
 
 controller()
